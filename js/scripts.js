@@ -17,8 +17,8 @@ $(document).ready(function() {
     var holderName = $('input#account-holder-name').val();
     var initialDeposit = parseFloat($('input#initial-deposit').val()).toFixed(2);
     var account = new BankAccount(holderName, initialDeposit);
-    $('#displayed-balance').html(
-      '<h1>' +
+    $('.displayed-balance').html(
+      '<h1>' + "$" +
         '<span id="recent-balance">' + initialDeposit + '</span>' +
       '</h1>');
   });
@@ -29,6 +29,6 @@ debugger;
     var oldBalance = parseFloat($('#recent-balance').text());
     var depositAmount = parseFloat($('input#account-deposit').val()).toFixed(2);
     var withdrawalAmount = parseFloat($('input#account-withdrawal').val()).toFixed(2);
-    $('#displayed-balance').text(oldBalance + (depositAmount - withdrawalAmount));
+    $('.displayed-balance').text(oldBalance + (depositAmount - withdrawalAmount));
   });
 });

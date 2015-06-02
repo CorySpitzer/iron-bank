@@ -15,16 +15,20 @@ $(document).ready(function() {
   $('form#new-account').submit(function(event) {
     event.preventDefault();
     var holderName = $('input#account-holder-name').val();
-    var initialDeposit = parseInt($('input#initial-deposit').val());
+    var initialDeposit = parseFloat($('input#initial-deposit').val()).toFixed(2);
     var account = new BankAccount(holderName, initialDeposit);
-    $('#displayed-balance').html('<p id="recent-balance">' + initialDeposit + '</p>');
+    $('#displayed-balance').html(
+      '<h1>' +
+        '<span id="recent-balance">' + initialDeposit + '</span>' +
+      '</h1>');
   });
 
   $('#alter-account').submit(function(event) {
+debugger;
     event.preventDefault();
-    var oldBalance = parseInt($('#recent-balance').text());
-    var depositAmount = parseInt($('input#account-deposit').val());
-    var withdrawalAmount = parseInt($('input#account-withdrawal').val());
+    var oldBalance = parseFloat($('#recent-balance').text());
+    var depositAmount = parseFloat($('input#account-deposit').val()).toFixed(2);
+    var withdrawalAmount = parseFloat($('input#account-withdrawal').val()).toFixed(2);
     $('#displayed-balance').text(oldBalance + (depositAmount - withdrawalAmount));
   });
 });

@@ -1,9 +1,14 @@
 body {
-    background-image: url("http://worldbankfinancing.com/wp-content/uploads/2014/02/banking-jobs.jpg");
-    color: white;
+  background-image: url("http://cdn.pinakistudios.com/wp-content/uploads/2014/08/Braavosi-meeting-1.jpg");
+  color: white;
 }
 
-h1, h4 {
+/*h1, h4 {
   background-color: lightgrey;
   color: black;
+  opacity: 0.75;
+}*/
+
+.jumbotron {
+  background: rgba(0, 0, 0, 0.25);
 }

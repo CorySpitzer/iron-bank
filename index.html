@@ -25,22 +25,21 @@
         </div>
         <button type="submit" class="btn btn-lg btn-success">Open Account</button>
       </form>
-      <form>
+
+      <form id="alter-account">
         <h4>Deposit or Withdraw from Account:</h4>
-        <div id="alter-account">
-          <div class='form-group'>
-            <div class="input-group input-group-lg">
-              <span class="input-group-addon" id="sizing-addon1">Deposit Amount:</span>
-              <input type="text" class='form-control' id='account-deposit' placeholder="$" aria-describedby="sizing-addon1">
-            </div>
-            <br>
-            <div class="input-group input-group-lg">
-              <span class="input-group-addon" id="sizing-addon1">Withdraw Amount:</span>
-              <input type="text" class='form-control' id='account-withdraw' placeholder="$" aria-describedby="sizing-addon1">
-            </div>
+        <div class='form-group'>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Deposit Amount:</span>
+            <input type="text" class='form-control' id='account-deposit' placeholder="$" aria-describedby="sizing-addon1">
           </div>
-          <button type="submit" class="btn btn-lg btn-success">Update Account</button>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Withdraw Amount:</span>
+            <input type="text" class='form-control' id='account-withdrawal' placeholder="$" aria-describedby="sizing-addon1">
+          </div>
         </div>
+        <button type="submit" class="btn btn-lg btn-success">Update Account</button>
       </form>
 
       <div id='displayed-balance'>

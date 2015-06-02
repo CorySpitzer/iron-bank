@@ -17,21 +17,14 @@ $(document).ready(function() {
     var holderName = $('input#account-holder-name').val();
     var initialDeposit = parseInt($('input#initial-deposit').val());
     var account = new BankAccount(holderName, initialDeposit);
-
-    // var alterBalance = function() {
-    //   $('#alter-account').submit(function(event) {
-    //     event.preventDefault();
-    //
-    //     var depositAmount = parseInt($('input#account-deposit').val());
-    //     var withdrawAmount = parseInt($('input#account-withdraw').val());
-    //
-    //     var newBalance = account.deposit(depositAmount - withdrawalAmount);
-    //     newBalance = 5;
-    //  });
-    // };
-    //
-    // alterBalance();
+    $('#displayed-balance').html('<p id="recent-balance">' + initialDeposit + '</p>');
   });
 
-
+  $('#alter-account').submit(function(event) {
+    event.preventDefault();
+    var oldBalance = parseInt($('#recent-balance').text());
+    var depositAmount = parseInt($('input#account-deposit').val());
+    var withdrawalAmount = parseInt($('input#account-withdrawal').val());
+    $('#displayed-balance').text(oldBalance + (depositAmount - withdrawalAmount));
+  });
 });

@@ -1,0 +1,9 @@
+body {
+    background-image: url("http://worldbankfinancing.com/wp-content/uploads/2014/02/banking-jobs.jpg");
+    color: white;
+}
+
+h1, h4 {
+  background-color: lightgrey;
+  color: black;
+}

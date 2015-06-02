@@ -9,13 +9,37 @@
   </head>
   <body>
     <div class='container'>
-
-      <h1 class="page-header text-center">Bank Account</h1>
-
-      <div class='form-group'>
-        <label for='account-holder-name'>Account holder name:</label>
-        <input type="text" class='form-control' id='account-holder-name'>
-      </div>
+      <h1 class="page-header text-center">The Iron Bank of Braavos</h1>
+      <h4>Open New Account:</h4>
+      <form id="new-account">
+        <div class='form-group'>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Account Holder Name:</span>
+            <input type="text" class='form-control' id='account-holder-name' placeholder="Scrooge McDuck" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Initial Deposit:</span>
+            <input type="text" class='form-control' id='initial-deposit' placeholder="$" aria-describedby="sizing-addon1">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-lg btn-success">Open Account</button>
+      </form>
+      <h4>Deposit or Withdraw from Account:</h4>
+      <form id="alter-account">
+        <div class='form-group'>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Deposit Amount:</span>
+            <input type="text" class='form-control' id='account-deposit' placeholder="$" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Withdraw Amount:</span>
+            <input type="text" class='form-control' id='account-withdraw' placeholder="$" aria-describedby="sizing-addon1">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-lg btn-success">Update Account</button>
+      </form>
     </div>
   </body>
 </html>

@@ -16,18 +16,22 @@ $(document).ready(function() {
     event.preventDefault();
     var holderName = $('input#account-holder-name').val();
     var initialDeposit = parseInt($('input#initial-deposit').val());
-    // alert(initialDeposit + ' ' + HolderName);
-    account = new BankAccount(holderName, initialDeposit);
-    // alert(account.holderName + initialDeposit)
+    var account = new BankAccount(holderName, initialDeposit);
+
+    // var alterBalance = function() {
+    //   $('#alter-account').submit(function(event) {
+    //     event.preventDefault();
+    //
+    //     var depositAmount = parseInt($('input#account-deposit').val());
+    //     var withdrawAmount = parseInt($('input#account-withdraw').val());
+    //
+    //     var newBalance = account.deposit(depositAmount - withdrawalAmount);
+    //     newBalance = 5;
+    //  });
+    // };
+    //
+    // alterBalance();
   });
 
-  $('form#alter-account').submit(function(event) {
-    event.preventDefault();
-    var depositAmount = parseInt($('input#account-deposit').val());
-    var withdrawAmount = parseInt($('input#account-withdraw').val());
-    alert(depositAmount + ' ' + withdrawAmount);
-    var newBalance = account.deposit(depositAmount - withdrawalAmount);
-    newBalance = 5;
-    alert(newBalance);
-  });
+
 });
